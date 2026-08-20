@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>堅守協定：盟約検索</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>アークナイツ 堅守協定</h1>
+    <h2>盟約検索</h2>
+</header>
+
+<main>
+
+    <section class="search-area">
+        <h3>オペレーター名で検索</h3>
+        <input type="text" id="searchInput" placeholder="オペレーター名を入力">
+    </section>
+
+    <section class="pact-area">
+        <h3>検索条件</h3>
+
+        <div class="filter-section">
+            <div class="filter-section-title">核心盟約</div>
+            <div id="corePactButtons" class="filter-buttons"></div>
+        </div>
+
+        <div class="filter-section">
+            <div class="filter-section-title">附加盟約</div>
+            <div id="additionalPactButtons" class="filter-buttons"></div>
+        </div>
+
+        <div class="filter-section">
+            <div class="filter-section-title">職分</div>
+            <div id="professionButtons" class="filter-buttons"></div>
+        </div>
+
+        <div class="filter-section">
+            <div class="filter-section-title">盟約レベル</div>
+            <div id="levelButtons" class="filter-buttons"></div>
+        </div>
+
+        <div class="filter-actions">
+            <button id="resetButton" class="reset-button">条件リセット</button>
+        </div>
+    </section>
+
+    <section id="selectedConditionsArea" class="selected-conditions-area empty">
+        <h3>選択中の条件</h3>
+        <div id="selectedConditions" class="selected-conditions"></div>
+    </section>
+
+    <section class="result-area">
+        <div class="result-heading">
+            <h3>検索結果</h3>
+            <div id="resultCount" class="result-count"></div>
+        </div>
+        <div id="operatorList"></div>
+    </section>
+
+    <section class="formation-area">
+        <div class="formation-heading">
+            <h3>編成候補</h3>
+            <button id="clearFormationButton" class="formation-clear-button">編成をクリア</button>
+        </div>
+
+        <div id="formationOperators" class="formation-operators"></div>
+
+        <div class="formation-summary-wrap">
+            <div class="formation-summary-column">
+                <div class="formation-summary-title">核心盟約</div>
+                <div id="formationCoreSummary" class="formation-summary"></div>
+            </div>
+
+            <div class="formation-summary-column">
+                <div class="formation-summary-title">附加盟約</div>
+                <div id="formationAdditionalSummary" class="formation-summary"></div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
